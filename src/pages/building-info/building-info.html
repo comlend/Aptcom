@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="back()">
+        <ion-icon name="arrow-back" color="secondary"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>BUILDING INFO</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="paddingtop"></div>
+  <ion-list>
+    <button ion-item *ngFor="let info of buildingInfos" (tap)="details(info)">
+      {{info.name}}
+    </button>
+  </ion-list>
+  
+
+</ion-content>
